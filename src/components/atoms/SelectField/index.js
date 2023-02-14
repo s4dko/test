@@ -15,14 +15,15 @@ function SelectField({
         <Select
           labelId="demo-simple-select-standard-label"
           id="demo-simple-select-standard"
-          value={input.value}
-          onChange={input.onChange}
           label={label}
+          {...input}
           {...other}
         >
           {
-            options.map( item =>
-              <MenuItem value={item.value}>{item.name}</MenuItem>
+            options.map( (item, index) =>
+              <MenuItem key={index} value={item.value}>
+                {item.name}
+              </MenuItem>
             )
           }
         </Select>

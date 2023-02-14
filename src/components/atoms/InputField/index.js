@@ -2,7 +2,7 @@ import React from 'react';
 import TextField from '@mui/material/TextField';
 
 function InputField({
-  label, name, meta: { touched, error }, ...other
+  label, name, input, meta: { touched, error }, ...other
 }) {
   return (
     <>
@@ -10,11 +10,12 @@ function InputField({
         id={name}
         label={label}
         variant="standard"
+        {...input}
         {...other}
       />
 
       { touched && error &&
-          <div className={'errorLabel'}>test</div>
+          <div className={'errorLabel'}>{error}</div>
       }
     </>
   );

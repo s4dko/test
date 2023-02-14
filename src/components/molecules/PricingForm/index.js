@@ -12,6 +12,7 @@ import {Form, Field} from "react-final-form";
 import InputField from "@atoms/InputField";
 import SelectField from "@atoms/SelectField"
 
+import {validatePricingForm} from "@molecules/PricingForm/validate";
 import '@molecules/PricingForm/index.module.css'
 
 function PricingForm() {
@@ -27,8 +28,8 @@ function PricingForm() {
         initialValues={{
           autoMarkup: 0
         }}
-        // validate={validate}
-        render={({handleSubmit}) => (
+        validate={validatePricingForm}
+        render={({handleSubmit, valid}) => (
           <form onSubmit={handleSubmit}>
             <Paper sx={{p: 5}}>
               <Grid container spacing={2}>
@@ -102,7 +103,7 @@ function PricingForm() {
 
             <Grid container justifyContent={'flex-end'} sx={{mt: 2}}>
               <Grid item>
-                <Button type='submit' variant="contained">
+                <Button type='submit' variant="contained" disabled={!valid}>
                   Save & Close
                 </Button>
               </Grid>
