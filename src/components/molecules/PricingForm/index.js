@@ -13,7 +13,6 @@ import InputField from "@atoms/InputField";
 import SelectField from "@atoms/SelectField"
 
 import {validatePricingForm} from "@molecules/PricingForm/validate";
-import '@molecules/PricingForm/index.module.css'
 
 function PricingForm() {
   const navigate = useNavigate();

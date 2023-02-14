@@ -1,7 +1,6 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 
-import '@atoms/InputField/index.module.css'
 import Typography from "@mui/material/Typography";
 
 function InputField({
@@ -20,7 +19,7 @@ function InputField({
       />
 
       { isError &&
-          <Typography className="errorLabel">{error}</Typography>
+          <Typography sx={{color: '#d32f2f', fontSize: 12}}>{error}</Typography>
       }
     </>
   );
