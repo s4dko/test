@@ -37,11 +37,7 @@ function Header() {
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Button
-              sx={{ my: 2, color: 'white', display: 'block' }}
-            >
-              Home
-            </Button>
+            <Button sx={{ my: 2, color: 'white', display: 'block' }}>Home</Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
