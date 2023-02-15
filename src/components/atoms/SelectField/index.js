@@ -44,7 +44,7 @@ SelectField.propTypes = {
   input: PropTypes.object,
   meta: PropTypes.object,
   fullWidth: PropTypes.bool,
-  options: PropTypes.node,
+  options: PropTypes.array,
 };
 
 export default SelectField;

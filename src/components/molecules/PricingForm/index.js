@@ -8,6 +8,7 @@ import InputField from '@atoms/InputField';
 import SelectField from '@atoms/SelectField';
 
 import { validatePricingForm } from '@molecules/PricingForm/validate';
+import { NumericFormatCustom } from '@atoms/NumericFormatCustom';
 
 function PricingForm() {
   const navigate = useNavigate();
@@ -57,6 +58,7 @@ function PricingForm() {
                   label="Sticker Price"
                   required={true}
                   fullWidth={true}
+                  mask={NumericFormatCustom}
                   component={InputField}
                 />
               </Grid>
@@ -67,6 +69,7 @@ function PricingForm() {
                   label="Online Price"
                   required={true}
                   fullWidth={true}
+                  mask={NumericFormatCustom}
                   component={InputField}
                 />
               </Grid>
@@ -77,6 +80,7 @@ function PricingForm() {
                   label="Wholesale Price"
                   required={true}
                   fullWidth={true}
+                  mask={NumericFormatCustom}
                   component={InputField}
                 />
               </Grid>
@@ -87,6 +91,7 @@ function PricingForm() {
                   label="Required Down"
                   required={true}
                   fullWidth={true}
+                  mask={NumericFormatCustom}
                   component={InputField}
                 />
               </Grid>

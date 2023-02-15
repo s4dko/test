@@ -37,7 +37,7 @@ Validate.validators.lessThanWholesalePrice = function (value, options, key, attr
   const valid = Validate.single(value, options);
   if (valid) {
     return valid;
-  } else if (value > attributes?.wholesalePrice) {
+  } else if (Number(value) > Number(attributes?.wholesalePrice)) {
     return 'Wholesale price should be more than the sticker price';
   }
 };
